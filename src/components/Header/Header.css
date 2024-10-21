@@ -1,0 +1,28 @@
+nav {
+    list-style: none;
+    text-decoration: none;
+}
+
+
+.menu{
+    background-color: silver;
+    padding: 15px 0 15px 0;
+}
+
+.menu__list{
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+
+.link{
+    color: white;
+    padding: 9px 20px;
+    background-color: gray;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.link:hover{
+    background-color: rgba(120, 91, 91, 0.61);
+}
