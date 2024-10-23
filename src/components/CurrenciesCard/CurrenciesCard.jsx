@@ -4,10 +4,11 @@ import iconDollar from '../images/currency-dollar.png'
 
 function CurrenciesCard({currencies, infoCurrencies}) {
     const currency = ['RUB', 'EUR', 'CNY', 'CHF', 'JPY', 'GBP', 'AUD', 'AUD']
-    const rates = Object.entries(currencies.rates)
-    const filteredRates = rates.filter(rate => {
+    const currenciesObject = Object.entries(currencies.rates)
+    const filteredRates = currenciesObject.filter(rate => {
         return currency.includes(rate[0])
     })
+
     const objCurrencies = filteredRates.map(rate => {
         return {
             key: rate[0],

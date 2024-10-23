@@ -1,0 +1,29 @@
+.metals-background{
+    background-image: url('../images/backgraund-metalCard.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.container__metal{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+    background-color: white;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    padding: 60px;
+}
+
+.container__metal-info{
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+}
