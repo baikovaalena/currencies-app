@@ -1,15 +1,17 @@
 import { useEffect, useState } from "react";
-import { getCurrencies, getInfoCurrencies } from "../../api";
-import CurrenciesCard from "../CurrenciesCard/CurrenciesCard";
+import { getCurrencies, getInfoCurrencies } from "../../../api";
+import CurrenciesCard from "./CurrenciesCard/CurrenciesCard";
+import "./Currencies.css";
+import Loader from "../../shared/Loader/Loader";
 
-function Currencies() {
+const Currencies = () => {
   const [currencies, setCurrencies] = useState(null);
   const [infoCurrencies, setInfoCurrencies] = useState(null);
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    async function handleInfoCurrencies() {
+    async function fetchCurrencyData() {
       try {
         const currentCurrencies = await getCurrencies();
         const information = await getInfoCurrencies();
@@ -22,22 +24,21 @@ function Currencies() {
       }
     }
 
-    handleInfoCurrencies();
+    fetchCurrencyData();
   }, []);
 
   return (
     <>
-      {isLoading && <p>Загрузка...</p>}
+      {isLoading && <Loader />}
       {error && <p>Error: {error}</p>}
-
       {currencies && infoCurrencies && (
         <CurrenciesCard
-          currencies={currencies}
-          infoCurrencies={infoCurrencies}
+          rates={currencies}
+          infoCurrencies={infoCurrencies.supportedCurrenciesMap}
         />
       )}
     </>
   );
-}
+};
 
 export default Currencies;

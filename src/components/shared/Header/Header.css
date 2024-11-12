@@ -3,9 +3,8 @@ nav {
     text-decoration: none;
 }
 
-
 .menu{
-    background-color: silver;
+    background-color: #4CAF50;
     padding: 15px 0 15px 0;
 }
 
@@ -18,7 +17,14 @@ nav {
 .link{
     color: white;
     padding: 9px 20px;
-    background-color: gray;
+    background-color: rgba(44, 103, 46, 0.5);
+    border-radius: 5px;
+    text-decoration: none;
+}
+.link-is-active{
+    color: white;
+    padding: 9px 20px;
+    background-color: rgba(44, 70, 103, 0.5);
     border-radius: 5px;
     text-decoration: none;
 }

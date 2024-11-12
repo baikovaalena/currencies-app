@@ -1,8 +1,8 @@
 import "./App.css";
-import Header from "./components/Header/Header";
+import Header from "./components/shared/Header/Header";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Currencies from "./components/Currencies/Currencies";
-import Metals from "./components/Metals/Metals";
+import Currencies from "./components/pages/Currencies/Currencies";
+import Metals from "./components/pages/Metals/Metals";
 
 const router = createBrowserRouter([
   {
@@ -23,22 +23,10 @@ const router = createBrowserRouter([
       </>
     ),
   },
-  {
-    path: "/search",
-    element: (
-      <>
-        <Header />
-      </>
-    ),
-  },
 ]);
 
 function App() {
-  return (
-    <>
-      <RouterProvider router={router} />
-    </>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

@@ -1,5 +1,5 @@
 .metals-background{
-    background-image: url('../images/backgraund-metalCard.jpg');
+    background-image: url('../../../../img/background-metal-card.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -15,7 +15,7 @@
     background-color: white;
 }
 
-.container{
+.container-metals{
     display: flex;
     flex-direction: column;
     padding: 60px;
